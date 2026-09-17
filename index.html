@@ -8,6 +8,12 @@
 </head>
 <body class="bg-slate-50 min-h-screen text-slate-800">
 
+    <!-- Toast Notification Banner -->
+    <div id="toast" class="fixed top-5 right-5 z-50 transform translate-x-full transition-all duration-300 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 text-xs font-medium border border-slate-700">
+        <span id="toast-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span id="toast-msg">Action executed successfully.</span>
+    </div>
+
     <!-- Header Section -->
     <header class="bg-white border-b border-slate-200 py-4 px-6 mb-8 shadow-sm">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
@@ -58,10 +64,10 @@
                 </div>
 
                 <div class="flex space-x-2">
-                    <button onclick="alert('Connecting to virtual examination room...')" class="flex-1 bg-blue-600 text-white text-xs font-semibold py-3 rounded-xl hover:bg-blue-700 transition shadow-sm">
+                    <button onclick="showToast('Connecting to secure virtual examination room...')" class="flex-1 bg-blue-600 text-white text-xs font-semibold py-3 rounded-xl hover:bg-blue-700 transition shadow-sm active:scale-95">
                         Join Session Now
                     </button>
-                    <button onclick="alert('Appointment cancelled successfully.')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition">
+                    <button onclick="showToast('Appointment rescheduled/cancelled.')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition active:scale-95">
                         Cancel
                     </button>
                 </div>
@@ -109,10 +115,10 @@
                     </div>
 
                     <div class="flex space-x-2">
-                        <button onclick="alert('Prescription sent to integrated pharmacy network.')" class="flex-1 bg-slate-900 text-white text-xs font-semibold py-3 rounded-xl hover:bg-slate-800 transition shadow-sm">
+                        <button onclick="showToast('Prescription successfully dispatched to integrated pharmacy.')" class="flex-1 bg-slate-900 text-white text-xs font-semibold py-3 rounded-xl hover:bg-slate-800 transition shadow-sm active:scale-95">
                             Send to Pharmacy
                         </button>
-                        <button onclick="alert('Generating official prescription PDF...')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition">
+                        <button onclick="showToast('Downloading official prescription PDF...')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition active:scale-95">
                             PDF
                         </button>
                     </div>
@@ -139,7 +145,7 @@
                     <div class="bg-slate-50 p-4 rounded-xl mb-4 border border-slate-100 space-y-2">
                         <div class="flex justify-between items-center text-xs text-slate-500">
                             <span class="font-semibold text-slate-700">SOAP Summary Note:</span>
-                            <span class="text-purple-600 font-medium">1m ago</span>
+                            <span class="text-purple-600 font-medium">Just now</span>
                         </div>
                         <p class="text-xs text-slate-600 leading-relaxed">
                             Patient presents with mild fever and dry cough for 2 days. Vitals stable (HR: 78, BP: 120/80). AI suggests confirming treatment protocol and dispatching prescription.
@@ -148,10 +154,10 @@
                 </div>
 
                 <div class="flex space-x-2">
-                    <button onclick="alert('Report approved and synced to EMR system database.')" class="flex-1 bg-purple-600 text-white text-xs font-semibold py-3 rounded-xl hover:bg-purple-700 transition shadow-sm">
+                    <button onclick="showToast('Report approved and synced to EMR database.')" class="flex-1 bg-purple-600 text-white text-xs font-semibold py-3 rounded-xl hover:bg-purple-700 transition shadow-sm active:scale-95">
                         Approve & Sync
                     </button>
-                    <button onclick="alert('Re-generating summary using Claude & Cursor workflow...')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition">
+                    <button onclick="showToast('Re-generating summary using Claude & Cursor AI workflow...')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition active:scale-95">
                         AI Edit
                     </button>
                 </div>
@@ -163,6 +169,19 @@
     <footer class="text-center py-6 text-xs text-slate-400 border-t border-slate-200">
         Bask Health Engineering Application Demo &bull; Built with AI-First Approach
     </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = message;
+            toast.classList.remove('translate-x-full');
+            setTimeout(() => {
+                toast.classList.add('translate-x-full');
+            }, 3500);
+        }
+    </script>
 
 </body>
 </html>
