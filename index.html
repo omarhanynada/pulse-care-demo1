@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseCare Patient Portal | Bask Health Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-800">
+
+    <!-- Header Section -->
+    <header class="bg-white border-b border-slate-200 py-4 px-6 mb-8 shadow-sm">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 text-white font-bold p-2 rounded-xl text-lg">Pulse</div>
+                <span class="font-bold text-xl text-slate-900">Health Care Demo</span>
+            </div>
+            <span class="text-xs bg-emerald-50 text-emerald-600 font-semibold px-3 py-1 rounded-full border border-emerald-100 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                System Live & Operational
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Grid -->
+    <main class="max-w-6xl mx-auto px-4 pb-12">
+        <div class="mb-6">
+            <h1 class="text-2xl font-extrabold text-slate-900">Patient & Care Team Portal</h1>
+            <p class="text-sm text-slate-500">AI-first telehealth infrastructure demonstration tailored for Bask Health.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Card 1: Video Consultation -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 transition hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=150" alt="Doctor" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100">
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-sm">Dr. Ahmed El-Shenawy</h3>
+                                <p class="text-xs text-slate-500">Cardiology & Internal Medicine</p>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 bg-emerald-50 text-emerald-600 text-xs font-semibold rounded-full flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Available
+                        </span>
+                    </div>
+
+                    <div class="bg-slate-50 p-3.5 rounded-xl mb-4 text-xs text-slate-600 flex justify-between items-center border border-slate-100">
+                        <div>
+                            <span class="block text-slate-400 mb-0.5">Consultation Time:</span>
+                            <span class="font-bold text-slate-700">Today, 04:30 PM</span>
+                        </div>
+                        <span class="bg-blue-50 text-blue-600 px-2.5 py-1 rounded-lg font-bold">HD Video</span>
+                    </div>
+                </div>
+
+                <div class="flex space-x-2">
+                    <button onclick="alert('Connecting to virtual examination room...')" class="flex-1 bg-blue-600 text-white text-xs font-semibold py-3 rounded-xl hover:bg-blue-700 transition shadow-sm">
+                        Join Session Now
+                    </button>
+                    <button onclick="alert('Appointment cancelled successfully.')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2: E-Prescription -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 transition hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg">Rx</div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-sm">E-Prescription</h3>
+                                <p class="text-xs text-slate-400">ID: #RX-98421</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full">
+                            Official
+                        </span>
+                    </div>
+
+                    <div class="space-y-3 mb-4">
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-slate-700 text-xs">Amoxicillin 500mg</span>
+                                <span class="text-xs text-blue-600 font-semibold">Capsules</span>
+                            </div>
+                            <p class="text-xs text-slate-500">Dosage: 1 capsule every 8 hours for 5 days</p>
+                        </div>
+
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-slate-700 text-xs">Panadol Extra</span>
+                                <span class="text-xs text-blue-600 font-semibold">Tablets</span>
+                            </div>
+                            <p class="text-xs text-slate-500">Dosage: As needed for headache (max 3/day)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between text-xs text-slate-500 bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100 mb-4">
+                        <span>Pharmacy: Digital Care Rx</span>
+                        <span class="text-emerald-600 font-bold">Ready to Dispatch</span>
+                    </div>
+
+                    <div class="flex space-x-2">
+                        <button onclick="alert('Prescription sent to integrated pharmacy network.')" class="flex-1 bg-slate-900 text-white text-xs font-semibold py-3 rounded-xl hover:bg-slate-800 transition shadow-sm">
+                            Send to Pharmacy
+                        </button>
+                        <button onclick="alert('Generating official prescription PDF...')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition">
+                            PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: AI Clinical Scribe & EMR -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 transition hover:shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-sm">AI</div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-sm">AI Clinical Scribe & EMR</h3>
+                                <p class="text-xs text-slate-400">Automated documentation</p>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded-full flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-600 animate-ping"></span>
+                            Active
+                        </span>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl mb-4 border border-slate-100 space-y-2">
+                        <div class="flex justify-between items-center text-xs text-slate-500">
+                            <span class="font-semibold text-slate-700">SOAP Summary Note:</span>
+                            <span class="text-purple-600 font-medium">1m ago</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Patient presents with mild fever and dry cough for 2 days. Vitals stable (HR: 78, BP: 120/80). AI suggests confirming treatment protocol and dispatching prescription.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-2">
+                    <button onclick="alert('Report approved and synced to EMR system database.')" class="flex-1 bg-purple-600 text-white text-xs font-semibold py-3 rounded-xl hover:bg-purple-700 transition shadow-sm">
+                        Approve & Sync
+                    </button>
+                    <button onclick="alert('Re-generating summary using Claude & Cursor workflow...')" class="px-4 bg-slate-100 text-slate-600 text-xs font-semibold py-3 rounded-xl hover:bg-slate-200 transition">
+                        AI Edit
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-6 text-xs text-slate-400 border-t border-slate-200">
+        Bask Health Engineering Application Demo &bull; Built with AI-First Approach
+    </footer>
+
+</body>
+</html>
